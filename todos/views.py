@@ -7,3 +7,7 @@ from rest_framework import generics
 class ListTodoItem(generics.ListAPIView):
     queryset = todoItem.objects.all()
     serializer_class = todoItemSerializer
+
+class DetailTodoItem(generics.RetrieveAPIView):
+    queryset = todoItem.objects.all()
+    serializer_class = todoItemSerializer
